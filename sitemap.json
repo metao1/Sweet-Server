@@ -1,0 +1,95 @@
+{
+  "/experiment/blog": {
+    "type": "experiment",
+    "date": "2015-03-17T12:49:26.733Z",
+    "title": "This blog",
+    "tags": [
+      "es6",
+      "es7",
+      "react",
+      "react-router",
+      "flummox",
+      "lunr",
+      "superagent",
+      "gulp",
+      "webpack"
+    ],
+    "src": "data/experiments/blog/2015-03-17.md"
+  },
+  "/experiment/angularjs-introduction": {
+    "type": "experiment",
+    "date": "2014-10-23T15:49:26.733Z",
+    "title": "AngularJS: Introduction to AngularJS, Hello World Starting ( Lesson 1 )",
+    "tags": [
+      "angularjs",
+      "angular"
+    ],
+    "src": "data/experiments/angularjs/2016-03-22.md"
+  },
+  "/experiment/angularjs-setup": {
+    "type": "experiment",
+    "date": "2014-10-23T15:49:26.733Z",
+    "title": "AngularJS: Introduction to AngularJS, Setup ( Lesson 2 )",
+    "tags": [
+      "angularjs",
+      "angular",
+      "setup",
+      "bower",
+      "npm",
+      "nodejs"
+    ],
+    "src": "data/experiments/angularjs/2016-03-22.md"
+  },
+  "/experiment/s3manager": {
+    "type": "experiment",
+    "date": "2015-03-13T15:49:26.733Z",
+    "title": "Managing files on Amazon S3, as well on any server,",
+    "tags": [
+      "node.js",
+      "jquery",
+      "Amazon Web Services",
+      "aws",
+      "file management",
+      "server",
+      "ftp",
+      "s3"
+    ],
+    "src": "data/experiments/s3manager/2015-03-11.md"
+  },
+  "/experiment/watchsite": {
+    "type": "experiment",
+    "date": "2014-10-23T15:49:26.733Z",
+    "title": "WatchSite: a service for monitoring your web site made easy",
+    "tags": [
+      "leaflet",
+      "jquery",
+      "geocoding",
+      "identify",
+      "overlays"
+    ],
+    "src": "data/experiments/watchsite/2015-04-11.md"
+  },
+  "/experiment/static-web-application": {
+    "type": "experiment",
+    "date": "2014-10-23T15:49:26.733Z",
+    "title": "Static Web Application guide",
+    "tags": [
+      "es5",
+      "static web sites",
+      "offline",
+      "fast",
+      "apps"
+    ],
+    "src": "data/experiments/static-web-application/2015-08-21.md"
+  },
+  "/cv": {
+    "type": "cv",
+    "date": "2015-03-13T15:49:26.733Z",
+    "title": "Mehrdad Allahkarami CV",
+    "tags": [
+      "CV",
+      "resume"
+    ],
+    "src": "data/cv/cv.md"
+  }
+}
