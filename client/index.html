@@ -12,11 +12,34 @@
     </style>
 </head>
 <body>
-<div ui-view></div>
-<footer>
-    <div class="w3-container w3-black w3-xlarge">
-        Visit <a href="https://sweet.com" target="_blank"> Sweet </a>
+<div id="wrapper">
+    <div id="header">
+        <ul class="w3-navbar w3-green">
+            <li style="background: #0019e5"><a href="/#/"><h5 class="w3-padding-4 logo-class"></h5>
+            </a></li>
+            <div class="w3-center" style="margin-top: 4px;margin-left: 3px;">
+                <li ng-style="{'backgrounng-ifd':cl==='en_US'?'#d3d3d3cd ':'#00ffffff'}">
+                    <a href="#" ng-click="setLang('en_US')"><img class="w3-image" src="images/flags/usa.png"></a></li>
+                <li ng-style="{'background':cl==='fa_IR'?'#d3d3d3':'#00ffffff'}">
+                    <a href="#" ng-click="setLang('fa_IR')"><img class="w3-image" src="images/flags/iran.png"></a>
+                </li>
+            </div>
+            <div class="w3-right">
+                <li><a class="w3-padding-16" href="#">CONTACT US</a></li>
+                <li><a class="w3-padding-16" href="#">ABOUT</a></li>
+                <li><a class="w3-padding-16" href="#">JOBS</a></li>
+                <li><a class="w3-padding-16" href="/#/signup">SIGN UP</a></li>
+                <li><a class="w3-padding-16" href="/#/login">SIGN IN</a></li>
+                <li><a class="w3-padding-16" href="/#/logout">SIGN OUT</a></li>
+            </div>
+        </ul>
     </div>
-</footer>
+    <div id="content">
+        <div ui-view></div>
+    </div>
+    <div class="w3-container w3-red" id="footer">
+        <a class="al3xis">Sweet Rental. 2016 All Rights Reserved</a>
+    </div>
+</div>
 </body>
 </html>

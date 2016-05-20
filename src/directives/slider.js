@@ -1,4 +1,4 @@
-angular.module('MyApp')
+angular.module('SweetApp')
     .directive('slider', function ($timeout) {
         return {
             restrict: 'AE',

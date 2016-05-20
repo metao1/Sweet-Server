@@ -20,7 +20,7 @@ var gulp = require('gulp'),
 var dest = './client',
     fontName = 'appfont';
 
-var jsFiles = ['./src/app.js', './src/controllers/*', "./src/directives"];
+var jsFiles = ['./src/app.js', './src/controllers/*', "./src/directives/slider.js"];
 
 gulp.task('fonts', function () {
     return gulp.src(['./src/assets/fonts/**'])
@@ -159,6 +159,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('default', ['clean', 'html', 'styles', 'js', 'img', 'lunrindex', 'sitemap', 'browser-sync'], function () {
+
     gulp.watch(["src/controllers/*.js", "src/*", "bower_components/**/*.js", "src/directives/*.js"], ['js']);
     gulp.watch(["src/*.html", "src/partials/*.html"], ['html']);
     gulp.watch(["src/stylesheets/*.scss", "src/stylesheets/**/*.scss"], ['styles']);

@@ -11,7 +11,7 @@ var http = require('http');
 var app = express();
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 3000));
 
 var server = require('http').Server(app);
 

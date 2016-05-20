@@ -1,7 +1,7 @@
 <div class="slide">
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
         <img ng-class="($index % 2 === 0)?'w3-animate-fading w3-animate-left':'w3-animate-fading w3-animate-top'"
-             style="z-index:-10;max-height: 180px;max-width: 440px;" ng-src="images/{{image.path}}" />
+             style="z-index:-10;max-height: 180px;max-width: 440px;" ng-src="{{image.path}}" />
     </div>
     <a class="w3-btn-floating w3-hover-dark-grey card-navigation" style="top: 25%;"
        ng-click="prev()">❮</a>
