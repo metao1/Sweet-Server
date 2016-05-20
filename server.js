@@ -21,8 +21,21 @@ server.listen(app.get('port'), function () {
 
 /*------------------Sample Data--------------------------------*/
 var data = {
-    id: "0", title: "A Sweet", description: "Good Sweet ro rent description", number: "10",
-    address: "n/a", date: "date", city: "Hamedan", thumbnails: [{id: "tbId", url: "tbUrl"}]
+    id: 0, title: "A Good Sweet", description: "Good Sweet to rent description",
+    created_date: "12569537329",
+	modified_added: "12569537329",
+	access_date:"12569537329", 
+	country:"Iran", 
+	city: "Hamedan",
+	address: "No.1,Buali Ave.", 
+	vote_up:10, vote_down:1, 
+	comments:[{id:0,comment:"Very good Suite"}
+	, {id:1,comment:"I liked it"}], 
+	viewed: 10, 
+	thumbnails: [
+	{id: "0", url: "https://https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Zeitstempel_01.jpg/220px-Zeitstempel_01.jpg"},
+	{id: "tbId", url: "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Android_6.0.1_Home_Screen_Nexus_7.png/240px-Android_6.0.1_Home_Screen_Nexus_7.png"}]
+	
 };
 
 /*------------Server Log Config -----------------------------*/
