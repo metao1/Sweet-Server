@@ -21,7 +21,7 @@ server.listen(app.get('port'), function () {
 
 /*------------------Sample Data--------------------------------*/
 var data = {
-    data:[{
+    suites:[{
 	id: 0, title: "A Good Sweet", description: "Good Sweet to rent description",
     created_date: "12569537329",
 	modified_added: "12569537329",
