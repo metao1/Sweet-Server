@@ -1,6 +1,5 @@
 .idea
 .git
-client
 .gitignore
 bower_components
 node_modules
