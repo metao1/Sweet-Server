@@ -1,4 +1,4 @@
-angular.module('MyApp')
+angular.module('SweetApp')
   .directive('passwordStrength', function() {
     return {
       restrict: 'A',

@@ -1,0 +1,42 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+a {
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+#header {
+  background: #ededed;
+  padding: 10px;
+}
+
+#content {
+  padding-bottom: 100px; /* Height of the footer element */
+}
+
+.add {
+  position: fixed;
+  right: 3%;
+  bottom: 15%;
+}
+
+#footer {
+  background: #ffab62;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

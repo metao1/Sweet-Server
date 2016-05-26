@@ -20,8 +20,6 @@ var gulp = require('gulp'),
 var dest = './client',
     fontName = 'appfont';
 
-var jsFiles = ['./src/app.js', './src/controllers/*', "./src/directives/slider.js"];
-
 gulp.task('fonts', function () {
     return gulp.src(['./src/assets/fonts/**'])
         .pipe(gulp.dest(dest + '/assets/fonts/'));
@@ -73,7 +71,7 @@ var bowerFiles = mainBowerFiles({
 });
 
 gulp.task('js', function () {
-    return gulp.src(bowerFiles.concat(jsFiles))
+    return gulp.src(bowerFiles.concat(["./src/app.js", /*'./src/libs*//*',*/ "./src/services/*", './src/controllers/*', "./src/directives/*"]))
         .pipe(gulpFilter('**/*.js'))
         .pipe(ngAnnotate())
         .pipe(concat('/assets/js/lib.js'))
@@ -137,7 +135,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./lib/**', ['js']);
+    gulp.watch(['./src/*.js', './src/**/*.js'], ['js']);
     gulp.watch('./src/*.html', ['html']);
     gulp.watch(['./src/stylesheets/**', './src/stylesheets/**/**'], ['styles']);
     /*gulp.watch('./src/assets/img*/
@@ -150,17 +148,16 @@ gulp.task('browser-sync', function () {
     browserSync.init(["./src/*.html", "./src/partials/*.html",
         "./src/*.json", "./src/stylesheets/*.scss", "./src/stylesheets/**/*.scss",
         "./src/assets/scss/**/*.scss"], {
-        server: {
-            port: 5000,
-            browser: ["firefox"], //browser: ["google chrome", "firefox"]
-            baseDir: "./client/"
-        }
+        proxy: "http://localhost:3000",
+        files: ["client/**/*.*"],
+        browser: "firefox",
+        port: 7000
     });
 });
 
 gulp.task('default', ['clean', 'html', 'styles', 'js', 'img', 'lunrindex', 'sitemap', 'browser-sync'], function () {
-
-    gulp.watch(["src/controllers/*.js", "src/*", "bower_components/**/*.js", "src/directives/*.js"], ['js']);
+    gulp.watch(["src/controllers/*.js", "src/*", "bower_components/**/*.js", "src/directives/*.js"
+        , "src/services/*.js"], ['js']);
     gulp.watch(["src/*.html", "src/partials/*.html"], ['html']);
     gulp.watch(["src/stylesheets/*.scss", "src/stylesheets/**/*.scss"], ['styles']);
     gulp.watch("src/*.json", ['json']);

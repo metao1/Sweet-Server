@@ -6,8 +6,8 @@ angular.module('SweetApp', ['ngResource', 'ngMessages', 'ui.router', 'ngRoute'])
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: '../../partials/board.html',
-                controller: 'BoardCtrl'/*,
+                templateUrl: './partials/sweet.html',
+                controller: 'SweetCtrl'/*,
                  resolve: {
                  authenticated: function ($q, $location, $auth) {
                  var deferred = $q.defer();
