@@ -61,7 +61,7 @@ angular.module('SweetApp')
         };
 
         $scope.commentClick = function (id) {
-            ideaArray[id].show = !ideaArray[id].show;
+            ideaArray[id].showComment = !ideaArray[id].showComment;
         };
 
         $scope.submitComment = function (id) {

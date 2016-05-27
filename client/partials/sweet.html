@@ -1,20 +1,21 @@
 <div class="w3-row-padding w3-margin-top" ng-controller="SweetCtrl">
-    <div class="w3-third 3-third mySlides w3-animate-left" ng-repeat="item in cards track by $index">
+    <div class="w3-third 3-third  w3-animate-left" ng-repeat="item in cards track by $index">
         <div class="w3-card-16">
-            <div class="item-class">
-                <h4 class="card-header">
-                    {{item.title}}</h4>
-            </div>
-            <div slider images="item.thumbnails"></div>
-            <div class="item-class" style="position: absolute;top:40%">
-                <h4 class="card-header">
-                    {{item.description}}</h4>
+            <div class="mySlides">
+                <div class="item-class">
+                    <h4 class="card-header">
+                        {{item.title}}</h4>
+                </div>
+                <div slider images="item.thumbnails"></div>
+                <div class="item-class" style="position: absolute;top:40%">
+                    <h4 class="card-header">
+                        {{item.description}}</h4>
+                </div>
             </div>
             <div class="play-button">
                 <div class="w3-center">
                     <button class="w3-btn w3-green">سفارش</button>
                 </div>
-
                 <button class="w3-btn w3-blue"
                         ng-style="" ng-click="commentClick(item.id);">Comment
                 </button>
@@ -25,7 +26,7 @@
                         ng-click="voteClick(item.id,-1);">Vote Down
                 </button>
             </div>
-            <div class="w3-container w3-light-grey w3-center" ng-show="item.show">
+            <div class="w3-container w3-light-grey w3-center" ng-show="item.showComment">
                 <span class="w3-padding-left">Your comment:</span>
                 <textarea spellcheck="true" ng-model="$parent.comment" class="w3-text" maxlength="25"></textarea>
                 <button class="w3-btn w3-green"
