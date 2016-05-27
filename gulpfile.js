@@ -104,7 +104,7 @@ gulp.task('sitemap', function () {
 });
 
 gulp.task('img', function () {
-    return gulp.src(['./src/assets/img/**'])
+    return gulp.src(['./src/images/**'])
         .pipe(gulp.dest(dest + '/assets/img'));
 });
 
@@ -114,22 +114,22 @@ gulp.task('deploypages', function () {
 });
 
 gulp.task('clean', function () {
-    del(['./dest/assets'], function (path) {
+    del(['./client/assets'], function (path) {
         console.log('Build folder is deleted\n');
     });
-    del(['./dest/data'], function (path) {
+    del(['./client/partials'], function (path) {
         console.log('Build folder is deleted\n');
     });
-    del(['./dest/index.html'], function (path) {
+    del(['./client/index.html'], function (path) {
         console.log('Build folder is deleted\n');
     });
-    del(['./dest/sitemap.json'], function (path) {
+    del(['./client/sitemap.json'], function (path) {
         console.log('Build folder is deleted\n');
     });
-    del(['./dest/sitemap.xml'], function (path) {
+    del(['./client/sitemap.xml'], function (path) {
         console.log('Build folder is deleted\n');
     });
-    del(['./dest/searchindex.json'], function (path) {
+    del(['./client/searchindex.json'], function (path) {
         console.log('Build folder is deleted\n');
     });
 });
@@ -138,11 +138,10 @@ gulp.task('watch', function () {
     gulp.watch(['./src/*.js', './src/**/*.js'], ['js']);
     gulp.watch('./src/*.html', ['html']);
     gulp.watch(['./src/stylesheets/**', './src/stylesheets/**/**'], ['styles']);
-    /*gulp.watch('./src/assets/img*/
-    /**', ['img']);*/
+    gulp.watch('./src/images/**', ['img']);
 });
 
-gulp.task('serve', serve('dest'));
+gulp.task('serve', serve('client'));
 
 gulp.task('browser-sync', function () {
     browserSync.init(["./src/*.html", "./src/partials/*.html",
@@ -155,12 +154,12 @@ gulp.task('browser-sync', function () {
     });
 });
 
-gulp.task('default', ['clean', 'html', 'styles', 'js', 'img', 'lunrindex', 'sitemap', 'browser-sync'], function () {
+gulp.task('default', [/*'clean', */'html', 'styles', 'js', 'img', 'lunrindex', 'sitemap', 'browser-sync'], function () {
     gulp.watch(["src/controllers/*.js", "src/*", "bower_components/**/*.js", "src/directives/*.js"
         , "src/services/*.js"], ['js']);
     gulp.watch(["src/*.html", "src/partials/*.html"], ['html']);
     gulp.watch(["src/stylesheets/*.scss", "src/stylesheets/**/*.scss"], ['styles']);
     gulp.watch("src/*.json", ['json']);
+    gulp.watch(["src/images/*.jpg", "src/images/*.png"], ['img']);
     gulp.watch("src/sitemap.json", ['sitemap']);
-    gulp.watch(["src/img/*.*", "src/img/**/*.*"], ['images']);
 });

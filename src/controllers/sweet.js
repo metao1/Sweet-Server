@@ -39,7 +39,6 @@ angular.module('SweetApp')
         $scope.voteClick = function (id, value) {
             if (value > 0) {
                 SweetService.voteUp({id: id}).success(function (data) {
-                    console.log(data);
                     if (data) {
                         ideaArray[id].vote_up = data.vote_up;
                         ideaArray[id].average = data.average;

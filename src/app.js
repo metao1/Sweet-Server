@@ -6,7 +6,7 @@ angular.module('SweetApp', ['ngResource', 'ngMessages', 'ui.router', 'ngRoute'])
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: './partials/sweet.html',
+                templateUrl: './partials/card.html',
                 controller: 'SweetCtrl'/*,
                  resolve: {
                  authenticated: function ($q, $location, $auth) {
@@ -20,6 +20,10 @@ angular.module('SweetApp', ['ngResource', 'ngMessages', 'ui.router', 'ngRoute'])
                  return deferred.promise;
                  }
                  }*/
+            })
+            .state('suite', {
+                url: '/suite/:id',
+                templateUrl: './partials/suite.html'
             });
         $urlRouterProvider.otherwise('/');
     });

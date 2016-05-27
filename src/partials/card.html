@@ -1,17 +1,19 @@
 <div class="w3-row-padding w3-margin-top" ng-controller="SweetCtrl">
     <div class="w3-third 3-third w3-animate-left" ng-repeat="item in cards track by $index">
         <div class="w3-card-16">
-            <div class="mySlides">
-                <div class="item-class">
-                    <h4 class="card-header">
-                        {{item.title}}</h4>
+            <a ng-href="/#/suite/{{item.id}}">
+                <div class="mySlides">
+                    <div class="item-class">
+                        <h4 class="card-header">
+                            {{item.title}}</h4>
+                    </div>
+                    <div slider images="item.thumbnails"></div>
+                    <div class="item-class" style="position: absolute;top:40%">
+                        <h4 class="card-header">
+                            {{item.description}}</h4>
+                    </div>
                 </div>
-                <div slider images="item.thumbnails"></div>
-                <div class="item-class" style="position: absolute;top:40%">
-                    <h4 class="card-header">
-                        {{item.description}}</h4>
-                </div>
-            </div>
+            </a>
             <div class="play-button">
                 <div class="w3-center">
                     <button class="w3-btn w3-green">سفارش</button>

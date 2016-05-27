@@ -11,13 +11,16 @@ angular.module('SweetApp')
                 return $http.get("/allsweets");
             },
             voteUp: function (q) {
-                return $http.post("/voteup", q);
+                return $http.post("/vote_up", q);
             },
             voteDown: function (q) {
-                return $http.post("/votedown", q);
+                return $http.post("/vote_down", q);
             },
             comment: function (q) {
                 return $http.post("/comment", q);
+            },
+            getSuiteById: function (q) {
+                return $http.post("/get_suite_by_id", q);
             }
         };
     });

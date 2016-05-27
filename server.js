@@ -37,11 +37,11 @@ var data = {
         thumbnails: [
             {
                 id: "0",
-                url: "assets/img/no_preview.jpg"
+                url: "assets/img/no_preview_image.jpg"
             },
             {
                 id: "1",
-                url: "assets/img/no_preview.jpg"
+                url: "assets/img/no_preview_image.jpg"
             }]
     },
         {
@@ -57,10 +57,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         },
         {
@@ -76,10 +76,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
@@ -96,10 +96,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
@@ -116,10 +116,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
@@ -136,10 +136,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
@@ -156,10 +156,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
@@ -176,10 +176,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
@@ -196,10 +196,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
@@ -216,15 +216,17 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
         ,
         {
-            id: 10, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 10,
+            title: "Another Good Sweet",
+            description: "Antother Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -236,10 +238,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview.jpg"},
+                {id: "0", url: "assets/img/no_preview_image.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview.jpg"
+                    url: "assets/img/no_preview_image.jpg"
                 }]
         }
     ]
@@ -279,7 +281,7 @@ app.get('/allsweets', function (req, res) {
     res.status(200).send(json);
 });
 
-app.post('/voteup', function (req, res) {
+app.post('/vote_up', function (req, res) {
     if (!req.body || !req.body.id) {
         return res.status(403).send('unauthorized');
     }
@@ -292,7 +294,16 @@ app.post('/voteup', function (req, res) {
     res.status(200).send(json);
 });
 
-app.post('/votedown', function (req, res) {
+app.post('/get_suite_by_id', function (req, res) {
+    if (!req.body || !req.body.id) {
+        return res.status(403).send('unauthorized');
+    }
+    var id = req.body.id;
+    var json = JSON.stringify(data.suites[id]);
+    res.status(200).send(json);
+});
+
+app.post('/vote_down', function (req, res) {
     if (!req.body || !req.body.id) {
         return res.status(403).send('unauthorized');
     }
