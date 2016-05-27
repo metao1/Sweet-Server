@@ -39,23 +39,28 @@ angular.module('SweetApp')
         $scope.voteClick = function (id, value) {
             if (value > 0) {
                 SweetService.voteUp({id: id}).success(function (data) {
-                    ideaArray[id].VoteUp.value = data.VoteUp.value;
-                    ideaArray[id].average = data.average;
-                    ideaArray[id].VoteDown.disabled = true;
-                    ideaArray[id].VoteUp.disabled = true;
-                    $scope.message = "Thanks for your feed back! Your feedback saved for this person. " +
-                    "\nYou can only vote once for " + ideaArray[id].DisplayName;
-                    $timeout(caller, 4000);
+                    console.log(data);
+                    if (data) {
+                        ideaArray[id].vote_up = data.vote_up;
+                        ideaArray[id].average = data.average;
+                        /*    ideaArray[id].VoteDown.disabled = true;
+                         ideaArray[id].VoteUp.disabled = true;*/
+                        $scope.message = "Thanks for your feed back! Your feedback saved for this person. " +
+                        "\nYou can only vote once for " + ideaArray[id].DisplayName;
+                        $timeout(caller, 4000);
+                    }
                 });
             } else {
                 SweetService.voteDown({id: id}).success(function (data) {
-                    ideaArray[id].VoteDown.value = data.VoteDown.value;
-                    ideaArray[id].average = data.average;
-                    ideaArray[id].VoteDown.disabled = true;
-                    ideaArray[id].VoteUp.disabled = true;
-                    $scope.message = "Thanks for your feed back! Your feedback saved for this person. " +
-                    "\nYou can only vote once for " + ideaArray[id].DisplayName;
-                    $timeout(caller, 4000);
+                    if (data) {
+                        ideaArray[id].vote_down = data.vote_down;
+                        ideaArray[id].average = data.average;
+                        /*ideaArray[id].VoteDown.disabled = true;
+                         ideaArray[id].VoteUp.disabled = true;*/
+                        $scope.message = "Thanks for your feed back! Your feedback saved for this person. " +
+                        "\nYou can only vote once for " + ideaArray[id].DisplayName;
+                        $timeout(caller, 4000);
+                    }
                 });
             }
         };

@@ -1,5 +1,5 @@
 <div class="w3-row-padding w3-margin-top" ng-controller="SweetCtrl">
-    <div class="w3-third 3-third  w3-animate-left" ng-repeat="item in cards track by $index">
+    <div class="w3-third 3-third w3-animate-left" ng-repeat="item in cards track by $index">
         <div class="w3-card-16">
             <div class="mySlides">
                 <div class="item-class">
@@ -16,6 +16,7 @@
                 <div class="w3-center">
                     <button class="w3-btn w3-green">سفارش</button>
                 </div>
+
                 <button class="w3-btn w3-blue"
                         ng-style="" ng-click="commentClick(item.id);">Comment
                 </button>
@@ -35,7 +36,7 @@
             </div>
             <div class="w3-container w3-pink w3-show-block w3-left-align">
                 <div class="w3-dropdown-hover">
-                    <i class="material-icons w3-animate-opacity  w3-hover-orange">comment</i>
+                    <i class="material-icons w3-animate-opacity w3-hover-aqua" style="color: #30aae9">comment</i>
 
                     <div class="w3-dropdown-content w3-card">
                         <div class="w3-container w3-light-grey" ng-repeat="comment in item.comments">
@@ -43,10 +44,10 @@
                         </div>
                     </div>
                 </div>
-                <i class="material-icons w3-animate-zoom w3-xlarge">ic_thumb_up</i><span
-                    class="w3-xlarge">{{item.VoteUp.value}}</span>
-                <i class="material-icons w3-animate-zoom w3-xlarge">ic_thumb_down</i><span
-                    class="w3-xlarge">{{item.VoteDown.value}}</span>
+                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #449d44">ic_thumb_up</i><span
+                    class="w3-xlarge">{{item.vote_up}}</span>
+                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #d58512">ic_thumb_down</i><span
+                    class="w3-xlarge">{{item.vote_down}}</span>
             </div>
         </div>
         <div style="margin: 10%"></div>

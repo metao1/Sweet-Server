@@ -30,7 +30,7 @@ var data = {
         country: "Iran",
         city: "Hamedan",
         address: "No.1,Buali Ave.",
-        vote_up: 10, vote_down: 1,
+        vote_up: 10, vote_down: 1, average_rate: 5.5,
         comments: [{id: 0, comment: "Very good Suite"}
             , {id: 1, comment: "I liked it"}],
         viewed: 10,
@@ -52,7 +52,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -71,7 +71,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -91,7 +91,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -111,7 +111,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -131,7 +131,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -151,7 +151,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -171,7 +171,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -191,7 +191,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -211,7 +211,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -231,7 +231,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1,
+            vote_up: 10, vote_down: 1, average_rate: 5.5,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -273,8 +273,47 @@ logger.token('id', function getId(req) {
     return req.id;
 });
 
-/*----------Server methods -----------------------------*/
+/*----------Server API -----------------------------*/
 app.get('/allsweets', function (req, res) {
     var json = JSON.stringify(data);
+    res.status(200).send(json);
+});
+
+app.post('/voteup', function (req, res) {
+    if (!req.body || !req.body.id) {
+        return res.status(403).send('unauthorized');
+    }
+    var id = req.body.id;
+    if (data.suites[id].vote_up >= 0) {
+        data.suites[id].vote_up += 1;
+        data.suites[id].average = (parseInt(data.suites[id].vote_up.value) - parseInt(data.suites[id].vote_down.value));
+    }
+    var json = JSON.stringify(data.suites[id]);
+    res.status(200).send(json);
+});
+
+app.post('/votedown', function (req, res) {
+    if (!req.body || !req.body.id) {
+        return res.status(403).send('unauthorized');
+    }
+    var id = req.body.id;
+    if (data.suites[id].vote_down >= 0) {
+        data.suites[id].vote_down += 1;
+        data.suites[id].average = (parseInt(data.suites[id].vote_up.value) - parseInt(data.suites[id].vote_down.value));
+    }
+    var json = JSON.stringify(data.suites[id]);
+    res.status(200).send(json);
+});
+
+app.post('/comment', function (req, res) {
+    if (!req.body || !req.body.id || !req.body.value) {
+        return res.status(403).send('unauthorized');
+    }
+    var comment = req.body.value;
+    var id = req.body.id;
+    if (data.suites[id]) {
+        data.suites[id].comments.push({"value": comment});
+    }
+    var json = JSON.stringify(data.suites[id]);
     res.status(200).send(json);
 });

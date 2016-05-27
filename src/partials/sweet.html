@@ -1,14 +1,16 @@
 <div class="w3-row-padding w3-margin-top" ng-controller="SweetCtrl">
-    <div class="w3-third 3-third mySlides w3-animate-left" ng-repeat="item in cards track by $index">
+    <div class="w3-third 3-third w3-animate-left" ng-repeat="item in cards track by $index">
         <div class="w3-card-16">
-            <div class="item-class">
-                <h4 class="card-header">
-                    {{item.title}}</h4>
-            </div>
-            <div slider images="item.thumbnails"></div>
-            <div class="item-class" style="position: absolute;top:40%">
-                <h4 class="card-header">
-                    {{item.description}}</h4>
+            <div class="mySlides">
+                <div class="item-class">
+                    <h4 class="card-header">
+                        {{item.title}}</h4>
+                </div>
+                <div slider images="item.thumbnails"></div>
+                <div class="item-class" style="position: absolute;top:40%">
+                    <h4 class="card-header">
+                        {{item.description}}</h4>
+                </div>
             </div>
             <div class="play-button">
                 <div class="w3-center">
@@ -25,7 +27,7 @@
                         ng-click="voteClick(item.id,-1);">Vote Down
                 </button>
             </div>
-            <div class="w3-container w3-light-grey w3-center" ng-show="item.show">
+            <div class="w3-container w3-light-grey w3-center" ng-show="item.showComment">
                 <span class="w3-padding-left">Your comment:</span>
                 <textarea spellcheck="true" ng-model="$parent.comment" class="w3-text" maxlength="25"></textarea>
                 <button class="w3-btn w3-green"
@@ -34,7 +36,7 @@
             </div>
             <div class="w3-container w3-pink w3-show-block w3-left-align">
                 <div class="w3-dropdown-hover">
-                    <i class="material-icons w3-animate-opacity  w3-hover-orange">comment</i>
+                    <i class="material-icons w3-animate-opacity w3-hover-aqua" style="color: #30aae9">comment</i>
 
                     <div class="w3-dropdown-content w3-card">
                         <div class="w3-container w3-light-grey" ng-repeat="comment in item.comments">
@@ -42,10 +44,10 @@
                         </div>
                     </div>
                 </div>
-                <i class="material-icons w3-animate-zoom w3-xlarge">ic_thumb_up</i><span
-                    class="w3-xlarge">{{item.VoteUp.value}}</span>
-                <i class="material-icons w3-animate-zoom w3-xlarge">ic_thumb_down</i><span
-                    class="w3-xlarge">{{item.VoteDown.value}}</span>
+                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #449d44">ic_thumb_up</i><span
+                    class="w3-xlarge">{{item.vote_up}}</span>
+                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #d58512">ic_thumb_down</i><span
+                    class="w3-xlarge">{{item.vote_down}}</span>
             </div>
         </div>
         <div style="margin: 10%"></div>
