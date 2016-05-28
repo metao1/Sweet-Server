@@ -45,7 +45,7 @@ var data = {
             }]
     },
         {
-            id: 1, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 1, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -64,7 +64,7 @@ var data = {
                 }]
         },
         {
-            id: 2, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 2, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -84,7 +84,7 @@ var data = {
         }
         ,
         {
-            id: 3, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 3, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -104,7 +104,7 @@ var data = {
         }
         ,
         {
-            id: 4, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 4, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -124,7 +124,7 @@ var data = {
         }
         ,
         {
-            id: 5, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 5, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -144,7 +144,7 @@ var data = {
         }
         ,
         {
-            id: 6, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 6, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -164,7 +164,7 @@ var data = {
         }
         ,
         {
-            id: 7, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 7, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -184,7 +184,7 @@ var data = {
         }
         ,
         {
-            id: 8, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 8, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -204,7 +204,7 @@ var data = {
         }
         ,
         {
-            id: 9, title: "Another Good Sweet", description: "Antother Good Sweet to rent description",
+            id: 9, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -226,7 +226,7 @@ var data = {
         {
             id: 10,
             title: "Another Good Sweet",
-            description: "Antother Good Sweet to rent description",
+            description: "Another Good Sweet to rent description",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
@@ -276,7 +276,7 @@ logger.token('id', function getId(req) {
 });
 
 /*----------Server API -----------------------------*/
-app.get('/allsweets', function (req, res) {
+app.get('/all', function (req, res) {
     var json = JSON.stringify(data);
     res.status(200).send(json);
 });
@@ -294,7 +294,7 @@ app.post('/vote_up', function (req, res) {
     res.status(200).send(json);
 });
 
-app.post('/get_suite_by_id', function (req, res) {
+app.get('/get_suite_by_id', function (req, res) {
     if (!req.body || !req.body.id) {
         return res.status(403).send('unauthorized');
     }

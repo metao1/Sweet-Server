@@ -7,7 +7,6 @@ angular.module('SweetApp')
         if (id && id >= 0) {
             $scope.suite = {};
             SweetService.getSuiteById({id: id}).success(function (data) {
-                console.log(data);
                 $scope.suite = data;
             });
         }

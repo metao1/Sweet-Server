@@ -109,7 +109,7 @@ gulp.task('img', function () {
 });
 
 gulp.task('deploypages', function () {
-    return gulp.src('./dest/**/*')
+    return gulp.src('./client/**/*')
         .pipe(deploypages({branch: 'master'}));
 });
 
