@@ -8,7 +8,7 @@ angular.module('SweetApp')
                 return $http.post("/vote", query);
             },
             allVotes: function () {
-                return $http.get("/allsweets");
+                return $http.get("/all");
             },
             voteUp: function (q) {
                 return $http.post("/vote_up", q);

@@ -328,3 +328,25 @@ app.post('/comment', function (req, res) {
     var json = JSON.stringify(data.suites[id]);
     res.status(200).send(json);
 });
+
+app.get('/delete_suite', function (req, res) {
+    if (!req.body || !req.body.id) {
+        return res.status(403).send('unauthorized');
+    }
+    var id = req.body.id;
+
+});
+
+app.post('/update_suite', function (req, res) {
+
+});
+
+app.get('/search_suite', function (req, res) {
+    var search = {
+        // id: 'id', title: '', description: '', vote_up: 1, vote_down: 10, average: 10,
+    };
+});
+
+app.post('/add_suite', function (req, res) {
+
+});
