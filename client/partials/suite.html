@@ -1,18 +1,20 @@
-<div class="popup" ng-controller="PopupCtrl" style="z-index: 1">
+<div class="popup" ng-controller="SuiteCtrl" style="z-index: 1">
     <div class="suite_header">
         <span>{{suite.title}}</span>
         <span class="w3-right w3-margin-64 w3-card-16 w3-tag w3-xxlarge w3-round-jumbo w3-green">
                             {{suite.average_rate}}</span>
     </div>
-    <div class="w3-content w3-container w3-card-4 w3-white w3-center">
-        <img class="mySlides w3-padding-4 w3-border-blue" ng-src="{{mainImage}}" style="width:60%">
-        <div class="w3-row-padding w3-border-blue w3-section" style="margin-bottom: 1%;">
-            <div class="w3-col s4" ng-repeat="img in suite.thumbnails track by $index">
-                <img class="mySlides w3-hover-khaki w3-border w3-hover-shadow" ng-src={{img.url}}
-                     ng-if="$index < 3" style="width:100%" ng-click="changeImage($index)">
+    <!--
+        <div class="w3-content w3-container w3-card-4 w3-white w3-center">
+            <img class="mySlides w3-padding-4 w3-border-blue" ng-src="{{mainImage}}" style="width:60%">
+            <div class="w3-row-padding w3-border-blue w3-section" style="margin-bottom: 1%;">
+                <div class="w3-col s4" ng-repeat="img in suite.thumbnails track by $index">
+                    <img class="mySlides w3-hover-khaki w3-border w3-hover-shadow" ng-src={{img.url}}
+                         ng-if="$index < 3" style="width:100%" ng-click="changeImage($index)">
+                </div>
             </div>
         </div>
-    </div>
+    -->
     <div class="w3-margin-24 w3-container w3-card-4 w3-white">
         <div class="w3-container  w3-padding-16 w3-pale-blue w3-leftbar w3-border-blue">
             <p>{{suite.description}}</p>
@@ -21,13 +23,13 @@
     <div class="w3-center w3-margin-24 w3-padding-24 w3-container w3-card-4 w3-white">
         <div class="w3-left">
             <button class="w3-btn w3-green">سفارش</button>
-            <button class="w3-btn w3-blue" ng-style="" ng-click="commentClick(item.id);">Comment
+            <button class="w3-btn w3-blue" ng-click="commentClick(suite.id);">Comment
             </button>
-            <button class="w3-btn w3-green" ng-click="voteClick(item.id,1);"
-                    ng-if="!item.VoteUp.disabled">Vote Up
+            <button class="w3-btn w3-green" ng-click="voteClick(suite.id,1);"
+                    ng-if="!suite.VoteUp.disabled">Vote Up
             </button>
-            <button class="w3-btn w3-red" ng-if="!item.VoteDown.disabled"
-                    ng-click="voteClick(item.id,-1);">Vote Down
+            <button class="w3-btn w3-red" ng-if="!suite.VoteDown.disabled"
+                    ng-click="voteClick(suite.id,-1);">Vote Down
             </button>
         </div>
         <div class="w3-right">
@@ -42,6 +44,13 @@
                     class="w3-xlarge">{{suite.viewed}}</span>
             </div>
         </div>
+    </div>
+    <div class="w3-container w3-light-grey w3-center" ng-show="suite.showComment">
+        <span class="w3-padding-left">Your comment:</span>
+        <textarea spellcheck="true" autofocus ng-model="comment" class="w3-text" maxlength="125"></textarea>
+        <button class="w3-btn w3-green" ng-class="{'w3-btn w3-green w3-disabled' : submitted }"
+                ng-click="submitComment(item.id);">SUBMIT
+        </button>
     </div>
     <div class="w3-margin-24 w3-white">
         <ul class="w3-ul w3-card-4">
