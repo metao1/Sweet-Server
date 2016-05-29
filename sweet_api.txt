@@ -1,0 +1,262 @@
+-------------------------------------------Sweet Server API Reference--------------------------------------
+**************************************************TEST SERVER**********************************************
+
+1) Getting all suites:
+
+Description: Get all suites
+URL : https://sweet-server.herokuapp.com/all
+Method : GET
+Content Type: none
+Parameters: none
+
+--Response Structure>>
+
+suites<jsonb>:{
+data<JsonArray>:[
+id: [Integer], title: [String], description:[String],
+    created_date: [Timestamp],
+	modified_added: [Timestamp],
+	access_date:[Timestamp], 
+	country:[String], 
+	city: [String],
+	address: [String], 
+	vote_up:[Integer], vote_down:[Integer], 
+	comments:[{id:[Integer],comment:[String]}
+	, {id:[Integer],comment:[String]}], 
+	viewed: [Integer], 
+	thumbnails: [<Array>
+	{id: [Integer], url: [String]]
+	}
+}
+]
+
+Response Example:
+
+"suites":{  
+   "data":[  
+      {  
+         "id":0,
+         "title":"A Good Sweet",
+         "description":"Good Sweet to rent description",
+         "created_date":"12569537329",
+         "modified_added":"12569537329",
+         "access_date":"12569537329",
+         "country":"Iran",
+         "city":"Hamedan",
+         "address":"No.1,Buali Ave.",
+         "vote_up":10,
+         "vote_down":1,
+         "comments":[  
+            {  
+               "id":0,
+               "comment":"Very good Suite"
+            },
+            {  
+               "id":1,
+               "comment":"I liked it"
+            }
+         ],
+         "viewed":10,
+         "thumbnails":[  
+            {  
+               "id":"0",
+               "url":"https://https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Zeitstempel_01.jpg/220px-Zeitstempel_01.jpg"
+            },
+            {  
+               "id":"tbId",
+               "url":"https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Android_6.0.1_Home_Screen_Nexus_7.png/240px-Android_6.0.1_Home_Screen_Nexus_7.png"
+            }
+         ]
+      },
+      {  
+         "id":1,
+         "title":"A Good Sweet",
+         "description":"Good Sweet to rent description",
+         "created_date":"12569537329",
+         "modified_added":"12569537329",
+         "access_date":"12569537329",
+         "country":"Iran",
+         "city":"Hamedan",
+         "address":"No.1,Buali Ave.",
+         "vote_up":10,
+         "vote_down":1,
+         "comments":[  
+            {  
+               "id":0,
+               "comment":"Very good Suite"
+            },
+            {  
+               "id":1,
+               "comment":"I liked it"
+            }
+         ],
+         "viewed":10,
+         "thumbnails":[  
+            {  
+               "id":"0",
+               "url":"https://https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Zeitstempel_01.jpg/220px-Zeitstempel_01.jpg"
+            },
+            {  
+               "id":"tbId",
+               "url":"https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Android_6.0.1_Home_Screen_Nexus_7.png/240px-Android_6.0.1_Home_Screen_Nexus_7.png"
+            }
+         ]
+      }
+   ]
+}
+--------------------------------------------
+
+2) Vote Up Suite:
+
+Description: Like a suite
+URL : https://sweet-server.herokuapp.com/vote_up
+Method : POST
+Parameters input: HTTP Body 
+Content Type: json/application
+Parameters-Structure: {id:[integer]}
+Parameters-Value: id = Suite ID 
+Response-Value : The updated suite
+
+*Note to Average as response
+--Response-Structure>>
+{
+id: [Integer], title: [String], description:[String],
+    created_date: [Timestamp],
+	modified_added: [Timestamp],
+	access_date:[Timestamp], 
+	country:[String], 
+	city: [String],
+	address: [String], 
+	vote_up:[Integer], vote_down:[Integer], 
+	average:[Integer],
+	comments:[{id:[Integer],comment:[String]}
+	, {id:[Integer],comment:[String]}], 
+	viewed: [Integer], 
+	thumbnails: [<Array>
+	{id: [Integer], url: [String]]
+	}
+}
+--------------------------------------------
+
+3) Vote Down Suite:
+
+Description: Dislike a suite 
+URL : https://sweet-server.herokuapp.com/vote_down
+Method : POST
+Parameters input: HTTP Body 
+Content Type: json/application
+Parameters-Structure: {id:[integer]}
+Parameters-Value: id = Suite ID 
+Response-Value : The updated suite
+
+--Response-Structure>>
+{
+id: [Integer], title: [String], description:[String],
+    created_date: [Timestamp],
+	modified_added: [Timestamp],
+	access_date:[Timestamp], 
+	country:[String], 
+	city: [String],
+	address: [String], 
+	vote_up:[Integer], vote_down:[Integer], 
+	average:[Integer], 
+	comments:[{id:[Integer],comment:[String]}
+	, {id:[Integer],comment:[String]}], 
+	viewed: [Integer], 
+	thumbnails: [<Array>
+	{id: [Integer], url: [String]]
+	}
+}
+--------------------------------------------
+
+4) Comment Suite:
+
+Description: Comment to a suite 
+URL : https://sweet-server.herokuapp.com/comment
+Method : POST
+Parameters input: HTTP Body 
+Content Type: json/application
+Parameters-Structure: {id:[integer], value:[String]}
+Parameters-Value: id = Suite ID , value = Comment Value
+Response-Value : The updated suite
+
+--Response-Structure>>
+{
+id: [Integer], title: [String], description:[String],
+    created_date: [Timestamp],
+	modified_added: [Timestamp],
+	access_date:[Timestamp], 
+	country:[String], 
+	city: [String],
+	address: [String], 
+	vote_up:[Integer], vote_down:[Integer], 
+	comments:[{id:[Integer],comment:[String]}
+	, {id:[Integer],comment:[String]}], 
+	viewed: [Integer], 
+	thumbnails: [<Array>
+	{id: [Integer], url: [String]]
+	}
+}
+--------------------------------------------
+
+5) Get Suite By ID:
+
+Description: Get a suite by its ID
+URL : https://sweet-server.herokuapp.com/get_suite_by_id
+Method : GET
+Parameters input: HTTP Body
+Content Type: json/application
+Parameters-Structure: {id:[integer]}
+Parameters-Value: id = Suite ID
+Response type: json/application
+Response-Value : The requested suite
+
+--Response-Structure>>
+{
+id: [Integer], title: [String], description:[String],
+    created_date: [Timestamp],
+	modified_added: [Timestamp],
+	access_date:[Timestamp], 
+	country:[String], 
+	city: [String],
+	address: [String], 
+	vote_up:[Integer], vote_down:[Integer], 
+	comments:[{id:[Integer],comment:[String]}
+	, {id:[Integer],comment:[String]}], 
+	viewed: [Integer], 
+	thumbnails: [<Array>
+	{id: [Integer], url: [String]]
+	}
+}
+
+--------------------------------------------
+
+5) Get Suite By ID:
+
+Description: Get a suite by its ID
+URL : https://sweet-server.herokuapp.com/get_suite_by_id
+Method : GET
+Parameters input: HTTP Body
+Content Type: json/application
+Parameters-Structure: {id:[integer]}
+Parameters-Value: id = Suite ID
+Response type: json/application
+Response-Value : The requested suite
+
+--Response-Structure>>
+{
+id: [Integer], title: [String], description:[String],
+    created_date: [Timestamp],
+	modified_added: [Timestamp],
+	access_date:[Timestamp], 
+	country:[String], 
+	city: [String],
+	address: [String], 
+	vote_up:[Integer], vote_down:[Integer], 
+	comments:[{id:[Integer],comment:[String]}
+	, {id:[Integer],comment:[String]}], 
+	viewed: [Integer], 
+	thumbnails: [<Array>
+	{id: [Integer], url: [String]]
+	}
+}
