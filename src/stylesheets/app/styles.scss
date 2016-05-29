@@ -1931,7 +1931,6 @@ footer a i b {
   background: #ffeb3b;
   margin: 3px auto;
   width: 80%;
-  height: 440px;
 }
 
 .mySlides {
@@ -1945,11 +1944,9 @@ footer a i b {
 
 .suite_header {
   @include transition(all 1s linear);
-  position: absolute;
   margin-top: -0px;
   background: #1E90FF;
   height: 10%;
-  width: 80%;
   box-shadow: 0px 7px #205F82;
   cursor: pointer;
   > span {

@@ -42,6 +42,22 @@ var data = {
             {
                 id: "1",
                 url: "assets/img/no_preview_image.jpg"
+            },
+            {
+                id: "2",
+                url: "assets/img/no_preview_image.jpg"
+            },
+            {
+                id: "3",
+                url: "assets/img/no_preview_image.jpg"
+            },
+            {
+                id: "4",
+                url: "assets/img/no_preview_image.jpg"
+            },
+            {
+                id: "5",
+                url: "assets/img/no_preview_image.jpg"
             }]
     },
         {
@@ -281,11 +297,12 @@ app.get('/all', function (req, res) {
     res.status(200).send(json);
 });
 
-app.get('/get_suite_by_id', function (req, res) {
-    if (!req.body || !req.body.id) {
+app.get('/suite/:id', function (req, res) {
+    if (!req.params.id) {
         return res.status(403).send('{error:"unauthorized"}');
     }
-    var id = req.body.id;
+    var id = req.params.id;
+    console.log(id);
     var json = JSON.stringify(data.suites[id]);
     res.status(200).send(json);
 });

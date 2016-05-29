@@ -1,8 +1,56 @@
 <div class="popup" ng-controller="PopupCtrl" style="z-index: 1">
-
     <div class="suite_header">
         <span>{{suite.title}}</span>
+        <span class="w3-right w3-margin-64 w3-card-16 w3-tag w3-xxlarge w3-round-jumbo w3-green">
+                            {{suite.average_rate}}</span>
     </div>
-    <div slider images="suite.thumbnails" style="z-index: 2"></div>
+    <div class="w3-content w3-container w3-card-4 w3-white w3-center">
+        <img class="mySlides w3-padding-4 w3-border-blue" ng-src="{{suite.thumbnails[0].url}}" style="width:60%">
+        <div class="w3-row-padding w3-border-blue w3-section" style="margin-bottom: 1%;">
+            <div class="w3-col s4" ng-repeat="img in suite.thumbnails track by $index">
+                <img class="mySlides demo w3-border w3-hover-shadow" ng-src={{img.url}}
+                     ng-if="$index < 3" style="width:100%">
+            </div>
+        </div>
+    </div>
+    <div class="w3-margin-24 w3-container w3-card-4 w3-white">
+        <div class="w3-container  w3-padding-16 w3-pale-blue w3-leftbar w3-border-blue">
+            <p>{{suite.description}}</p>
+        </div>
+    </div>
+    <div class="w3-center w3-margin-24 w3-padding-24 w3-container w3-card-4 w3-white">
+        <div class="w3-left">
+            <button class="w3-btn w3-green">سفارش</button>
+            <button class="w3-btn w3-blue" ng-style="" ng-click="commentClick(item.id);">Comment
+            </button>
+            <button class="w3-btn w3-green" ng-click="voteClick(item.id,1);"
+                    ng-if="!item.VoteUp.disabled">Vote Up
+            </button>
+            <button class="w3-btn w3-red" ng-if="!item.VoteDown.disabled"
+                    ng-click="voteClick(item.id,-1);">Vote Down
+            </button>
+        </div>
+        <div class="w3-right">
+            <div class="w3-col">
+                <i class="material-icons w3-animate-opacity w3-xlarge" style="color: #30aae9">comment</i>
+                <span class="w3-xlarge">{{suite.comments.length}}</span>
+                <i class="material-icons w3-animate-zoom" style="color: #449d44">ic_thumb_up</i><span
+                    class="w3-xlarge">{{suite.vote_up}}</span>
+                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #d58512">ic_thumb_down</i><span
+                    class="w3-xlarge">{{suite.vote_down}}</span>
+                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #d58512">ic_visibility</i><span
+                    class="w3-xlarge">{{suite.viewed}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="w3-margin-24 w3-white">
+        <ul class="w3-ul w3-card-4">
+            <li class="w3-padding-32" ng-repeat="value in suite.comments">
+                <img src="assets/img/img_avatar.png" class="w3-left w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-xlarge">{{value.comment}}</span><br>
 
+            </li>
+        </ul>
+    </div>
+    <div class="w3-padding-32"></div>
 </div>
