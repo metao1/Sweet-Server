@@ -37,27 +37,27 @@ var data = {
         thumbnails: [
             {
                 id: "0",
-                url: "assets/img/no_preview_image.jpg"
+                url: "assets/img/image1.bmp"
             },
             {
                 id: "1",
-                url: "assets/img/no_preview_image.jpg"
+                url: "assets/img/image2.bmp"
             },
             {
                 id: "2",
-                url: "assets/img/no_preview_image.jpg"
+                url: "assets/img/image3.bmp"
             },
             {
                 id: "3",
-                url: "assets/img/no_preview_image.jpg"
+                url: "assets/img/image4.bmp"
             },
             {
                 id: "4",
-                url: "assets/img/no_preview_image.jpg"
+                url: "assets/img/image5.bmp"
             },
             {
                 id: "5",
-                url: "assets/img/no_preview_image.jpg"
+                url: "assets/img/image1.bmp"
             }]
     },
         {
@@ -73,10 +73,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         },
         {
@@ -92,10 +92,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -112,10 +112,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -132,10 +132,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -152,10 +152,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -172,10 +172,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -192,10 +192,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -212,10 +212,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -232,10 +232,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
         ,
@@ -254,10 +254,10 @@ var data = {
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/no_preview_image.jpg"},
+                {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/no_preview_image.jpg"
+                    url: "assets/img/image1.bmp"
                 }]
         }
     ]

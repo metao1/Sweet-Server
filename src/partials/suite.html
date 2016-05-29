@@ -5,11 +5,11 @@
                             {{suite.average_rate}}</span>
     </div>
     <div class="w3-content w3-container w3-card-4 w3-white w3-center">
-        <img class="mySlides w3-padding-4 w3-border-blue" ng-src="{{suite.thumbnails[0].url}}" style="width:60%">
+        <img class="mySlides w3-padding-4 w3-border-blue" ng-src="{{mainImage}}" style="width:60%">
         <div class="w3-row-padding w3-border-blue w3-section" style="margin-bottom: 1%;">
             <div class="w3-col s4" ng-repeat="img in suite.thumbnails track by $index">
-                <img class="mySlides demo w3-border w3-hover-shadow" ng-src={{img.url}}
-                     ng-if="$index < 3" style="width:100%">
+                <img class="mySlides w3-hover-khaki w3-border w3-hover-shadow" ng-src={{img.url}}
+                     ng-if="$index < 3" style="width:100%" ng-click="changeImage($index)">
             </div>
         </div>
     </div>

@@ -8,7 +8,15 @@ angular.module('SweetApp')
             $scope.suite = {};
             SweetService.getSuiteById({id: id}).success(function (data) {
                 $scope.suite = data;
+                $scope.mainImage = data.thumbnails[0].url;
             });
         }
+        $scope.changeImage = function (id) {
+            if ($scope.mainImage) {
+                if ($scope.suite.thumbnails[id]) {
+                    $scope.mainImage = $scope.suite.thumbnails[id].url;
+                }
+            }
+        };
     }
 );

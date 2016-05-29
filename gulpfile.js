@@ -160,6 +160,6 @@ gulp.task('default', [/*'clean', */'html', 'styles', 'js', 'img', 'lunrindex', '
     gulp.watch(["src/*.html", "src/partials/*.html"], ['html']);
     gulp.watch(["src/stylesheets/*.scss", "src/stylesheets/**/*.scss"], ['styles']);
     gulp.watch("src/*.json", ['json']);
-    gulp.watch(["src/images/*.jpg", "src/images/*.png"], ['img']);
+    gulp.watch(["src/images/*.jpg", "src/images/*.png", "src/images/*.bmp"], ['img']);
     gulp.watch("src/sitemap.json", ['sitemap']);
 });
