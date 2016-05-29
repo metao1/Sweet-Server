@@ -28,7 +28,7 @@ var data = {
         modified_added: "12569537329",
         access_date: "12569537329",
         country: "Iran",
-        city: "Hamedan",
+        city: "Hamedan",price:240000,
         address: "No.1,Buali Ave.",
         vote_up: 10, vote_down: 1, average_rate: 9,
         comments: [{id: 0, comment: "Very good Suite"}
