@@ -30,7 +30,7 @@ var data = {
         country: "Iran",
         city: "Hamedan",
         address: "No.1,Buali Ave.",
-        vote_up: 10, vote_down: 1, average_rate: 5.5,
+        vote_up: 10, vote_down: 1, average_rate: 9,
         comments: [{id: 0, comment: "Very good Suite"}
             , {id: 1, comment: "I liked it"}],
         viewed: 10,
@@ -52,7 +52,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -71,7 +71,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -91,7 +91,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -111,7 +111,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -131,7 +131,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -151,7 +151,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -171,7 +171,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -191,7 +191,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -211,7 +211,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -233,7 +233,7 @@ var data = {
             country: "Iran",
             city: "Hamedan",
             address: "No.1,Buali Ave.",
-            vote_up: 10, vote_down: 1, average_rate: 5.5,
+            vote_up: 10, vote_down: 1, average_rate: 9,
             comments: [{id: 0, comment: "Very good Suite"}
                 , {id: 1, comment: "I liked it"}],
             viewed: 10,
@@ -281,36 +281,36 @@ app.get('/all', function (req, res) {
     res.status(200).send(json);
 });
 
-app.post('/vote_up', function (req, res) {
+app.get('/get_suite_by_id', function (req, res) {
     if (!req.body || !req.body.id) {
-        return res.status(403).send('unauthorized');
+        return res.status(403).send('{error:"unauthorized"}');
     }
     var id = req.body.id;
-    if (data.suites[id].vote_up >= 0) {
-        data.suites[id].vote_up += 1;
-        data.suites[id].average = (parseInt(data.suites[id].vote_up.value) - parseInt(data.suites[id].vote_down.value));
-    }
     var json = JSON.stringify(data.suites[id]);
     res.status(200).send(json);
 });
 
-app.get('/get_suite_by_id', function (req, res) {
+app.post('/vote_up', function (req, res) {
     if (!req.body || !req.body.id) {
-        return res.status(403).send('unauthorized');
+        return res.status(403).send('{error:"unauthorized"}');
     }
     var id = req.body.id;
+    if (data.suites[id].vote_up >= 0) {
+        data.suites[id].vote_up += 1;
+        data.suites[id].average_rate = (parseInt(data.suites[id].vote_up) - parseInt(data.suites[id].vote_down));
+    }
     var json = JSON.stringify(data.suites[id]);
     res.status(200).send(json);
 });
 
 app.post('/vote_down', function (req, res) {
     if (!req.body || !req.body.id) {
-        return res.status(403).send('unauthorized');
+        return res.status(403).send('{error:"unauthorized"}');
     }
     var id = req.body.id;
     if (data.suites[id].vote_down >= 0) {
         data.suites[id].vote_down += 1;
-        data.suites[id].average = (parseInt(data.suites[id].vote_up.value) - parseInt(data.suites[id].vote_down.value));
+        data.suites[id].average_rate = (parseInt(data.suites[id].vote_up) - parseInt(data.suites[id].vote_down));
     }
     var json = JSON.stringify(data.suites[id]);
     res.status(200).send(json);
@@ -318,7 +318,7 @@ app.post('/vote_down', function (req, res) {
 
 app.post('/comment', function (req, res) {
     if (!req.body || !req.body.id || !req.body.value) {
-        return res.status(403).send('unauthorized');
+        return res.status(403).send('{error:"unauthorized"}');
     }
     var comment = req.body.value;
     var id = req.body.id;
@@ -331,7 +331,7 @@ app.post('/comment', function (req, res) {
 
 app.get('/delete_suite', function (req, res) {
     if (!req.body || !req.body.id) {
-        return res.status(403).send('unauthorized');
+        return res.status(403).send('{error:"unauthorized"}');
     }
     var id = req.body.id;
 

@@ -41,7 +41,7 @@ angular.module('SweetApp')
                 SweetService.voteUp({id: id}).success(function (data) {
                     if (data) {
                         ideaArray[id].vote_up = data.vote_up;
-                        ideaArray[id].average = data.average;
+                        ideaArray[id].average_rate = data.average_rate;
                         /*    ideaArray[id].VoteDown.disabled = true;
                          ideaArray[id].VoteUp.disabled = true;*/
                         $scope.message = "Thanks for your feed back! Your feedback saved for this person. " +
@@ -53,7 +53,7 @@ angular.module('SweetApp')
                 SweetService.voteDown({id: id}).success(function (data) {
                     if (data) {
                         ideaArray[id].vote_down = data.vote_down;
-                        ideaArray[id].average = data.average;
+                        ideaArray[id].average_rate = data.average_rate;
                         /*ideaArray[id].VoteDown.disabled = true;
                          ideaArray[id].VoteUp.disabled = true;*/
                         $scope.message = "Thanks for your feed back! Your feedback saved for this person. " +

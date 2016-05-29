@@ -4,9 +4,6 @@
 angular.module('SweetApp')
     .factory("SweetService", function ($http) {
         return {
-            vote: function (query) {
-                return $http.post("/vote", query);
-            },
             allVotes: function () {
                 return $http.get("/all");
             },
