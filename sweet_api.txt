@@ -202,7 +202,7 @@ id: [Integer], title: [String], description:[String],
 5) Get Suite By ID:
 
 Description: Get a suite by its ID
-URL : https://sweet-server.herokuapp.com/get_suite_by_id
+URL : https://sweet-server.herokuapp.com/suite/:id
 Method : GET
 Parameters input: HTTP Body
 Content Type: json/application
