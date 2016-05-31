@@ -13,6 +13,7 @@ Parameters: none
 
 suites<jsonb>:{
 data<JsonArray>:[
+	{
     id: [Integer],
     title: [String],
     description:[String],
@@ -27,14 +28,14 @@ data<JsonArray>:[
 	price :[Integer],
 	area:[Integer],
 	nor:[Integer],
-	comments:[{id:[Integer],comment:[String]}
+	comments:[<Array>{id:[Integer],comment:[String]}
 	, {id:[Integer],comment:[String]}], 
 	viewed: [Integer], 
 	thumbnails: [<Array>
 	{id: [Integer], url: [String]]
 	}
-}
 ]
+}
 
 Response Example:
 
@@ -146,7 +147,7 @@ Response-Value : The updated suite
 	price :[Integer],
 	area:[Integer],
 	nor:[Integer],
-	comments:[{id:[Integer],comment:[String]}
+	comments:[<Array>{id:[Integer],comment:[String]}
 	, {id:[Integer],comment:[String]}], 
 	viewed: [Integer], 
 	thumbnails: [<Array>
@@ -182,7 +183,7 @@ Response-Value : The updated suite
 	price :[Integer],
 	area:[Integer],
 	nor:[Integer],
-	comments:[{id:[Integer],comment:[String]}
+	comments:[<Array>{id:[Integer],comment:[String]}
 	, {id:[Integer],comment:[String]}], 
 	viewed: [Integer], 
 	thumbnails: [<Array>
@@ -218,7 +219,7 @@ Response-Value : The updated suite
 	price :[Integer],
 	area:[Integer],
 	nor:[Integer],
-	comments:[{id:[Integer],comment:[String]}
+	comments:[<Array>{id:[Integer],comment:[String]}
 	, {id:[Integer],comment:[String]}], 
 	viewed: [Integer], 
 	thumbnails: [<Array>
@@ -255,7 +256,7 @@ Response-Value : The requested suite
 	price :[Integer],
 	area:[Integer],
 	nor:[Integer],
-	comments:[{id:[Integer],comment:[String]}
+	comments:[<Array>{id:[Integer],comment:[String]}
 	, {id:[Integer],comment:[String]}], 
 	viewed: [Integer], 
 	thumbnails: [<Array>
@@ -293,10 +294,63 @@ Response-Value : The requested suite
 	price :[Integer],
 	area:[Integer],
 	nor:[Integer],
-	comments:[{id:[Integer],comment:[String]}
+	comments:[<Array>{id:[Integer],comment:[String]}
 	, {id:[Integer],comment:[String]}], 
 	viewed: [Integer], 
 	thumbnails: [<Array>
 	{id: [Integer], url: [String]]
 	}
+}
+
+
+--------------------------------------------
+
+6) Filter Suites:
+
+Description: Filter suites
+URL : https://sweet-server.herokuapp.com/search_suite
+Method : POST
+Parameters input: HTTP Body
+Content Type: json/application
+Parameters-Structure: {
+	title:[String]<Optional>,
+	title:[String]<Optional>,
+	area:[<Array>, {start:[Integer], end:[Integer]}],
+	price:[<Array>, {start:[Integer], end:[Integer]}],
+	nor:[Integer],
+	city:[String],
+	country:[String],
+	average_rate:[Integer]
+ }
+Parameters-Value: title = Suite title, area/start: Area From Start Value,
+	area/end: Area to end Value,price/start: Price From Start Value,
+	price/start: Price From Start Value,nor: Number of Rooms,
+	city: City,country: country,average_rate: Average rate
+Response type: json/application
+Response-Value : Filtered suites
+
+--Response-Structure>>
+suites<jsonb>:{
+data<JsonArray>:[
+ {
+	id: [Integer],
+    title: [String],
+    description:[String],
+    created_date: [Timestamp],
+	modified_added: [Timestamp],
+	access_date:[Timestamp],
+	country:[String],
+	city: [String],
+	address: [String],
+	vote_up:[Integer],
+	vote_down:[Integer],
+	price :[Integer],
+	area:[Integer],
+	nor:[Integer],
+	comments:[<Array>{id:[Integer],comment:[String]}
+	, {id:[Integer],comment:[String]}],
+	viewed: [Integer],
+	thumbnails: [<Array>{id: [Integer], url: [String]]
+}
+]
 }
