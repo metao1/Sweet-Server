@@ -315,8 +315,8 @@ Content Type: json/application
 Parameters-Structure: {
 	title:[String]<Optional>,
 	title:[String]<Optional>,
-	area:[<Array>, {start:[Integer], end:[Integer]}],
-	price:[<Array>, {start:[Integer], end:[Integer]}],
+	area:[<Array>, [Integer],[Integer]],
+	price:[<Array>, [Integer],[Integer]],
 	nor:[Integer],
 	city:[String],
 	country:[String],

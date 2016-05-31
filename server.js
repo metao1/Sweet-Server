@@ -415,14 +415,17 @@ app.post('/search_suite', function (req, res) {
                 wrapFunction(value);
             }
         }
-        if (obj.hasOwnProperty('area_start') && obj.hasOwnProperty('area_end')) {
-            if (value.area >= obj.area_start && value.area <= obj.area_end) {
-                wrapFunction(value);
-            }
+        if (obj.hasOwnProperty('area')) {
+            if (Array.isArray(obj.area) && obj.area.length === 2)
+                if (value.area >= obj.area[0] && value.area <= obj.area[1]) {
+                    wrapFunction(value);
+                }
         }
-        if (obj.hasOwnProperty('price_start') && obj.hasOwnProperty('price_end')) {
-            if (value.price >= obj.price_start && value.price <= obj.price) {
-                wrapFunction(value);
+        if (obj.hasOwnProperty('price')) {
+            if (Array.isArray(obj.price) && obj.price.length === 2) {
+                if (value.price >= obj.price[0] && value.price <= obj.price[1]) {
+                    wrapFunction(value);
+                }
             }
         }
         if (obj.hasOwnProperty('nor')) {
@@ -454,7 +457,8 @@ app.post('/search_suite', function (req, res) {
      console.log(value);
      });*/
 
-});
+})
+;
 
 app.post('/add_suite', function (req, res) {
 
