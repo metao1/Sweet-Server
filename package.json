@@ -18,6 +18,8 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.12.4",
+    "browser-sync": "^2.12.10",
+    "del": "^2.2.0",
     "express": "^4.12.4",
     "file-stream-rotator": "^0.0.6",
     "gulp-concat": "^2.6.0",
@@ -25,7 +27,9 @@
     "gulp-filter": "^4.0.0",
     "gulp-ng-annotate": "^2.0.0",
     "gulp-uglify": "^1.5.3",
+    "lunr": "^0.7.1",
     "main-bower-files": "^2.13.0",
+    "marked": "^0.3.5",
     "morgan": "^1.5.3"
   },
   "devDependencies": {

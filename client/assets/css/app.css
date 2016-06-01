@@ -541,7 +541,7 @@ img.w3-image, .w3-image img {
 }
 
 .w3-main {
-  transition: margin-left 0.4s;
+  transition: margin-left .4s;
 }
 
 .w3-dropnav {
@@ -1942,6 +1942,12 @@ footer a i b {
   background: #1E90FF;*/
 }
 
+.slide img {
+  z-index: -10;
+  max-height: 180px;
+  max-width: 440px;
+}
+
 .suite_header {
   -webkit-transition: all 1s linear;
   -moz-transition: all 1s linear;
@@ -1967,7 +1973,7 @@ footer a i b {
   margin-top: -50px;
   background: #111111;
   opacity: 0;
-  width: 96%;
+  width: 96.5%;
 }
 
 .mySlides:hover .item-class {
@@ -1976,19 +1982,18 @@ footer a i b {
   -ms-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  -moz-transform: translateY(50px);
-  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(40px);
+  -webkit-transform: translateY(40px);
   opacity: 0.7;
 }
 
 .play-button {
   background: #30aae9;
-  top: 51%;
 }
 
 .play-button div {
   display: inline-block;
-  margin: 30px;
+  margin: 14px;
 }
 
 .card-navigation {
@@ -1998,11 +2003,12 @@ footer a i b {
 }
 
 .card-header {
-  float: left;
-  margin-left: 10px;
+  float: right;
+  margin-right: 10px;
   color: #ffffff;
   z-index: 1;
   font-weight: bold;
+  width: 80%;
 }
 
 .w3-card-16 img {
@@ -2270,7 +2276,7 @@ input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-se
 }
 
 fieldset {
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
   margin: 0 2px;
   border: 1px solid silver;
 }
@@ -3253,9 +3259,9 @@ img {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .img-circle {
@@ -4625,9 +4631,9 @@ output {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
 .form-control:focus {
@@ -5270,9 +5276,9 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
 
 .fade {
   opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  -o-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
+  -webkit-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
 }
 
 .fade.in {
@@ -6696,7 +6702,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 
 .label {
   display: inline;
-  padding: 0.2em 0.6em 0.3em;
+  padding: .2em .6em .3em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
@@ -6864,9 +6870,9 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 4px;
-  -webkit-transition: border 0.2s ease-in-out;
-  -o-transition: border 0.2s ease-in-out;
-  transition: border 0.2s ease-in-out;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
 }
 
 .thumbnail > img, .thumbnail a > img {
@@ -7022,9 +7028,9 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
   background-color: #428bca;
   -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
-  transition: width 0.6s ease;
+  -webkit-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
 }
 
 .progress-striped .progress-bar, .progress-bar-striped {
@@ -7716,9 +7722,9 @@ button.close {
 }
 
 .modal.fade .modal-dialog {
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-  -o-transition: -o-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform .3s ease-out;
+  -o-transition: -o-transform .3s ease-out;
+  transition: transform .3s ease-out;
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
   -o-transform: translate(0, -25%);
@@ -8118,9 +8124,9 @@ button.close {
 
 @media all and (transform-3d), (-webkit-transform-3d) {
   .carousel-inner > .item {
-    -webkit-transition: -webkit-transform 0.6s ease-in-out;
-    -o-transition: -o-transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out;
+    -webkit-transition: -webkit-transform .6s ease-in-out;
+    -o-transition: -o-transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-perspective: 1000;
@@ -8617,6 +8623,12 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+.farsi {
+  text-align: right;
+  float: right;
+  direction: rtl;
 }
 
 #wrapper {

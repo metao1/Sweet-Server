@@ -25,22 +25,22 @@ server.listen(app.get('port'), function () {
 var data = {
     suites: [{
         id: 0,
-        title: "A Good Sweet",
-        description: "Good Sweet to rent description",
+        title: "یک سوییت خوب",
+        description: "توضیح یک سوییت خوب",
         created_date: "12569537329",
         modified_added: "12569537329",
         access_date: "12569537329",
-        country: "Iran",
-        city: "Hamedan",
+        country: "ایران",
+        city: "همدان",
         price: 240000,
         area: 124,
         nor: 2,
-        address: "No.1, Buali Ave.",
+        address: "خیابان بوعلی شماره ۱۸",
         vote_up: 11,
         vote_down: 1,
         average_rate: 10,
-        comments: [{id: 0, comment: "Very good Suite"}
-            , {id: 1, comment: "I liked it"}],
+        comments: [{id: 0, comment: "سوییت خوبی بود"}
+            , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
         viewed: 10,
         thumbnails: [
             {
@@ -54,34 +54,22 @@ var data = {
             {
                 id: "2",
                 url: "assets/img/image3.bmp"
-            },
-            {
-                id: "3",
-                url: "assets/img/image4.bmp"
-            },
-            {
-                id: "4",
-                url: "assets/img/image5.bmp"
-            },
-            {
-                id: "5",
-                url: "assets/img/image1.bmp"
             }]
     },
         {
-            id: 1, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 1, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Hamedan",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "همدان",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 93,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -91,42 +79,42 @@ var data = {
                 }]
         },
         {
-            id: 2, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 2, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Tehran",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "تهران",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 24,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "assets/img/image2.bmp"
                 }]
         }
         ,
         {
-            id: 3, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 3, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Isfahan",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "اصفهان",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 114,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -137,19 +125,19 @@ var data = {
         }
         ,
         {
-            id: 4, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 4, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Shiraz",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "شیراز",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 44,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -160,19 +148,19 @@ var data = {
         }
         ,
         {
-            id: 5, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 5, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Shiraz",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "شیراز",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 60,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -183,19 +171,19 @@ var data = {
         }
         ,
         {
-            id: 6, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 6, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Hamedan",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "همدان",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 91,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -206,19 +194,19 @@ var data = {
         }
         ,
         {
-            id: 7, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 7, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Tehran",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "تهران",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 34,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -229,19 +217,19 @@ var data = {
         }
         ,
         {
-            id: 8, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 8, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Tehran",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "تهران",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 45,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -252,19 +240,19 @@ var data = {
         }
         ,
         {
-            id: 9, title: "Another Good Sweet", description: "Another Good Sweet to rent description",
+            id: 9, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
+            country: "ایران",
             city: "Mashhad",
-            address: "No.1,Buali Ave.",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 104,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -276,20 +264,20 @@ var data = {
         ,
         {
             id: 10,
-            title: "Another Good Sweet",
-            description: "Another Good Sweet to rent description",
+            title: "یک سوییت خوب دیگر",
+            description: " توضیح یک سوییت خوب",
             created_date: "12569537329",
             modified_added: "12569537329",
             access_date: "12569537329",
-            country: "Iran",
-            city: "Hamedan",
-            address: "No.1,Buali Ave.",
+            country: "ایران",
+            city: "همدان",
+            address: "خیابالن بوعلی شماره ۱۸",
             vote_up: 10, vote_down: 1, average_rate: 9,
             price: 240000,
             area: 122,
             nor: 2,
-            comments: [{id: 0, comment: "Very good Suite"}
-                , {id: 1, comment: "I liked it"}],
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
                 {id: "0", url: "assets/img/image1.bmp"},
@@ -328,8 +316,14 @@ function assignId(req, res, next) {
 logger.token('id', function getId(req) {
     return req.id;
 });
+
+function interceptor(req, res, next) {
+    res.setHeader('charset','UTF-8');
+    next();
+}
+
 /*----------Server API -----------------------------*/
-app.get('/all', function (req, res) {
+app.get('/all', interceptor, function (req, res) {
     res.status(200).json(data);
 });
 
@@ -366,6 +360,11 @@ app.post('/vote_down', function (req, res) {
 });
 
 app.post('/comment', function (req, res) {
+    var theUrl = url.parse(req.url);
+    console.log(theUrl);
+
+    var queryObj = queryString.parse(theUrl);
+    var obj = JSON.parse(queryObj);
     if (!req.body || !req.body.id || !req.body.value) {
         return res.status(403).send('{error:"unauthorized"}');
     }

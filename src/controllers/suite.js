@@ -34,6 +34,8 @@ angular.module('SweetApp')
                 "id": id,
                 "value": commentVar.value
             };
+
+            console.log(commentRequest);
             SweetService.comment(commentRequest).success(function (data) {
                 if (data) {
                     $scope.suite.comments = data.comments;

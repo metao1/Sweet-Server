@@ -136,7 +136,7 @@ gulp.task('clean', function () {
 
 gulp.task('watch', function () {
     gulp.watch(['./src/*.js', './src/**/*.js'], ['js']);
-    gulp.watch('./src/*.html', ['html']);
+    gulp.watch(['./scr/*.html', './src/partials/*.html'], ['html']);
     gulp.watch(['./src/stylesheets/**', './src/stylesheets/**/**'], ['styles']);
     gulp.watch('./src/images/**', ['img']);
 });
@@ -149,7 +149,7 @@ gulp.task('browser-sync', function () {
         "./src/assets/scss/**/*.scss"], {
         proxy: "http://localhost:3000",
         files: ["client/**/*.*"],
-        browser: "firefox",
+        browser: ["google-chrome"],
         port: 7000
     });
 });

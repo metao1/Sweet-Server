@@ -4,18 +4,19 @@
         <span class="w3-right w3-margin-64 w3-card-16 w3-tag w3-xxlarge w3-round-jumbo w3-green">
                             {{suite.average_rate}}</span>
     </div>
-        <div class="w3-content w3-container w3-card-4 w3-white w3-center">
-            <img class="mySlides w3-padding-4 w3-border-blue" ng-src="{{mainImage}}" style="width:60%">
-            <div class="w3-row-padding w3-border-blue w3-section" style="margin-bottom: 1%;">
-                <div class="w3-col s4" ng-repeat="img in suite.thumbnails track by $index">
-                    <img class="mySlides w3-hover-khaki w3-border w3-hover-shadow" ng-src={{img.url}}
-                         ng-if="$index < 3" style="width:100%" ng-click="changeImage($index)">
-                </div>
+   <div class="w3-content w3-container w3-card-4 w3-white w3-center">
+        <img class="mySlides w3-padding-4 w3-border-blue" ng-src="{{mainImage}}" style="width:50%;">
+
+        <div class="w3-row-padding w3-border-blue w3-section" style="margin-bottom: 1%;">
+            <div class="w3-col s4" ng-repeat="img in suite.thumbnails track by $index">
+                <img class="mySlides w3-hover-khaki w3-border w3-hover-shadow" ng-src={{img.url}}
+                     ng-if="$index < 3" style="width:100%" ng-click="changeImage($index)">
             </div>
         </div>
+    </div>
     <div class="w3-margin-24 w3-container w3-card-4 w3-white">
-        <div class="w3-container  w3-padding-16 w3-pale-blue w3-leftbar w3-border-blue">
-            <p>{{suite.description}}</p>
+        <div class="w3-container  w3-padding-16 w3-pale-blue w3-rightbar w3-border-blue">
+            <p style="float: right;direction: rtl;">{{suite.description}}</p>
         </div>
     </div>
     <div class="w3-center w3-margin-24 w3-padding-24 w3-container w3-card-4 w3-white">
@@ -51,10 +52,10 @@
         </button>
     </div>
     <div class="w3-margin-24 w3-white">
-        <ul class="w3-ul w3-card-4">
-            <li class="w3-padding-32" ng-repeat="value in suite.comments">
-                <img src="assets/img/img_avatar.png" class="w3-left w3-circle w3-margin-right" style="width:60px">
-                <span class="w3-xlarge">{{value.comment}}</span><br>
+        <ul class="w3-ul w3-card-4 w3-card w3-khaki">
+            <li class="w3-padding-24" ng-repeat="value in suite.comments">
+                <img src="assets/img/img_avatar.png" class="w3-circle w3-margin-right" style="width:60px">
+                <span class="w3-xlarge w3-right w3-margin-4">{{value.comment}}</span><br>
 
             </li>
         </ul>

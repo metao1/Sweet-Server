@@ -14,6 +14,7 @@ angular.module('SweetApp')
                 return $http.post("/vote_down", q);
             },
             comment: function (q) {
+                console.log(q);
                 return $http.post("/comment", q);
             },
             getSuiteById: function (q) {

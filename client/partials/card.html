@@ -1,4 +1,4 @@
-<div class="w3-row-padding w3-margin-top" ng-controller="SweetCtrl">
+<div class="w3-row-padding w3-margin-top farsi" ng-controller="SweetCtrl">
     <div class="w3-third 3-third w3-animate-left" ng-repeat="item in cards track by $index">
         <div class="w3-card-16">
             <a ng-href="/#/suite/{{item.id}}">
@@ -6,7 +6,7 @@
                     <div class="item-class">
                         <h4 class="card-header">
                             {{item.title}}</h4>
-                        <span class="w3-right w3-margin-4 w3-card-16 w3-tag w3-xxlarge w3-round-jumbo w3-green">
+                        <span class="w3-left w3-margin-4 w3-card-16 w3-tag w3-large w3-round-jumbo w3-green">
                             {{item.average_rate}}</span>
                     </div>
                     <div slider images="item.thumbnails"></div>
@@ -17,42 +17,38 @@
                 </div>
             </a>
 
-            <div class="play-button">
-                <div class="w3-center">
-                    <button class="w3-btn w3-green">سفارش</button>
+            <div class="play-button w3-center">
+                <div class="w3-left">
+                    <span class="w3-margin-1 w3-card-16 w3-tag w3-large w3-round-jumbo w3-green">
+                            {{item.city}}</span>
                 </div>
-
-                <button class="w3-btn w3-blue"
-                        ng-style="" ng-click="commentClick(item.id);">Comment
-                </button>
-                <button class="w3-btn w3-green" ng-click="voteClick(item.id,1);"
-                        ng-if="!item.VoteUp.disabled">Vote Up
-                </button>
-                <button class="w3-btn w3-red" ng-if="!item.VoteDown.disabled"
-                        ng-click="voteClick(item.id,-1);">Vote Down
-                </button>
+                <div class="w3-center">
+                    <button class="w3-btn w3-green">{{'order'| translate}}</button>
+                </div>
             </div>
-            <div class="w3-container w3-light-grey w3-center" ng-show="item.showComment">
-                <span class="w3-padding-left">Your comment:</span>
-                <textarea spellcheck="true" ng-model="$parent.comment" class="w3-text" maxlength="25"></textarea>
-                <button class="w3-btn w3-green"
-                        ng-click="submitComment(item.id);">SUBMIT
-                </button>
-            </div>
-            <div class="w3-container w3-pink w3-show-block w3-left-align">
-                <div class="w3-dropdown-hover">
-                    <i class="material-icons w3-animate-opacity w3-hover-aqua" style="color: #30aae9">comment</i>
-
+            <ul class="w3-ul w3-card-4 w3-card w3-khaki">
+                <li class="w3-padding-16" ng-repeat="value in item.comments" ng-if="$index < 1">
+                    <img src="assets/img/img_avatar.png" class="w3-left w3-circle w3-right"
+                         style="width:30px;margin-left: 3%;margin-right: 3%;">
+                    <span class="w3-large w3-right">{{value.comment}}</span><br>
+                </li>
+            </ul>
+            <div class="w3-container w3-pink w3-show-block">
+                <div class="w3-dropdown-hover w3-margin-2">
+                    <span class="w3-large">{{item.comments.length}}</span>
+                    <i class="material-icons w3-animate-opacity w3-hover-aqua" style="color: #30aae9;">comment</i>
                     <div class="w3-dropdown-content w3-card">
                         <div class="w3-container w3-light-grey" ng-repeat="comment in item.comments">
-                            <h4 class="w3-hover-orange">{{comment.comment}}</h4>
+                            <h5 class="w3-hover-orange">{{comment.comment}}</h5>
                         </div>
                     </div>
                 </div>
-                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #449d44">ic_thumb_up</i><span
-                    class="w3-xlarge">{{item.vote_up}}</span>
-                <i class="material-icons w3-animate-zoom w3-xlarge" style="color: #d58512">ic_thumb_down</i><span
-                    class="w3-xlarge">{{item.vote_down}}</span>
+                <span class="w3-large w3-margin-2">{{item.vote_up}}</span>
+                <i class="material-icons w3-animate-zoom w3-large" style="color: #449d44">ic_thumb_up</i>
+                <span class="w3-large w3-margin-2">{{item.vote_down}}</span>
+                <i class="material-icons w3-animate-zoom w3-large" style="color: #d58512">ic_thumb_down</i>
+                <span class="w3-large w3-margin-2">{{item.viewed}}</span>
+                <i class="material-icons w3-animate-zoom w3-large" style="color: #d58512">ic_visibility</i>
             </div>
         </div>
         <div style="margin: 10%"></div>
