@@ -45,15 +45,15 @@ var data = {
         thumbnails: [
             {
                 id: "0",
-                url: "assets/img/image1.bmp"
+                url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
             },
             {
                 id: "1",
-                url: "assets/img/image2.bmp"
+                url: "http://sweetycafe.ir/images/khoshk/DSC_0028.jpg"
             },
             {
                 id: "2",
-                url: "assets/img/image3.bmp"
+                url: "http://sweetycafe.ir/images/khoshk/DSC_0066.jpg"
             }]
     },
         {
@@ -72,10 +72,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         },
         {
@@ -94,10 +94,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image2.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0028.jpg"
                 }]
         }
         ,
@@ -117,10 +117,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
         ,
@@ -140,10 +140,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
         ,
@@ -163,10 +163,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
         ,
@@ -186,10 +186,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
         ,
@@ -209,10 +209,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
         ,
@@ -232,10 +232,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
         ,
@@ -255,10 +255,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
         ,
@@ -280,10 +280,10 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "assets/img/image1.bmp"},
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
                     id: "1",
-                    url: "assets/img/image1.bmp"
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
                 }]
         }
     ]
