@@ -45,18 +45,248 @@ var data = {
         thumbnails: [
             {
                 id: "0",
-                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+                url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
             },
             {
                 id: "1",
-                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+                url: "http://sweetycafe.ir/images/khoshk/DSC_0028.jpg"
             },
             {
                 id: "2",
-                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+                url: "http://sweetycafe.ir/images/khoshk/DSC_0066.jpg"
             }]
-              
-        }]
+    },
+        {
+            id: 1, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "همدان",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 93,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        },
+        {
+            id: 2, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "تهران",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 24,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0028.jpg"
+                }]
+        }
+        ,
+        {
+            id: 3, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "اصفهان",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 114,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+        ,
+        {
+            id: 4, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "شیراز",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 44,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+        ,
+        {
+            id: 5, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "شیراز",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 60,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+        ,
+        {
+            id: 6, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "همدان",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 91,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+        ,
+        {
+            id: 7, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "تهران",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 34,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+        ,
+        {
+            id: 8, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "تهران",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 45,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+        ,
+        {
+            id: 9, title: "یک سوییت خوب دیگر", description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "Mashhad",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 104,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+        ,
+        {
+            id: 10,
+            title: "یک سوییت خوب دیگر",
+            description: " توضیح یک سوییت خوب",
+            created_date: "12569537329",
+            modified_added: "12569537329",
+            access_date: "12569537329",
+            country: "ایران",
+            city: "همدان",
+            address: "خیابالن بوعلی شماره ۱۸",
+            vote_up: 10, vote_down: 1, average_rate: 9,
+            price: 240000,
+            area: 122,
+            nor: 2,
+            comments: [{id: 0, comment: "سوییت خوبی بود"}
+                , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
+            viewed: 10,
+            thumbnails: [
+                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
+                {
+                    id: "1",
+                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                }]
+        }
+    ]
 };
 
 /*------------Server Log Config -----------------------------*/
