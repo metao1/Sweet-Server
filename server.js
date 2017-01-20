@@ -45,15 +45,15 @@ var data = {
         thumbnails: [
             {
                 id: "0",
-                url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
             },
             {
                 id: "1",
-                url: "http://sweetycafe.ir/images/khoshk/DSC_0028.jpg"
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
             },
             {
                 id: "2",
-                url: "http://sweetycafe.ir/images/khoshk/DSC_0066.jpg"
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
             }]
     },
         {
@@ -94,11 +94,18 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
                 {
-                    id: "1",
-                    url: "http://sweetycafe.ir/images/khoshk/DSC_0028.jpg"
-                }]
+                id: "0",
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+            },
+            {
+                id: "1",
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+            },
+            {
+                id: "2",
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+            }]
         }
         ,
         {
@@ -163,11 +170,18 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
-                {
-                    id: "1",
-                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
-                }]
+                  {
+                id: "0",
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+            },
+            {
+                id: "1",
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+            },
+            {
+                id: "2",
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+            }]
         }
         ,
         {
@@ -186,11 +200,18 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
-                {
-                    id: "1",
-                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
-                }]
+                  {
+                id: "0",
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+            },
+            {
+                id: "1",
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+            },
+            {
+                id: "2",
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+            }]
         }
         ,
         {
@@ -209,11 +230,18 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
-                {
-                    id: "1",
-                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
-                }]
+                  {
+                id: "0",
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+            },
+            {
+                id: "1",
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+            },
+            {
+                id: "2",
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+            }]
         }
         ,
         {
@@ -232,11 +260,18 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
-                {
-                    id: "1",
-                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
-                }]
+                 {
+                id: "0",
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+            },
+            {
+                id: "1",
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+            },
+            {
+                id: "2",
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+            }]
         }
         ,
         {
@@ -255,11 +290,18 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
-                {
-                    id: "1",
-                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
-                }]
+                  {
+                id: "0",
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+            },
+            {
+                id: "1",
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+            },
+            {
+                id: "2",
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+            }]
         }
         ,
         {
@@ -280,11 +322,18 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
             thumbnails: [
-                {id: "0", url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"},
-                {
-                    id: "1",
-                    url: "http://sweetycafe.ir/images/khoshk/DSC_0008.jpg"
-                }]
+                 {
+                id: "0",
+                url: "http://cdn.zavaran.com/zavaran/images/slides/flex2.jpg"
+            },
+            {
+                id: "1",
+                url: "http://s4.picofile.com/file/8179036292/1379838460_%D9%87%D8%AA%D9%84_%D8%AF%D8%B1%D9%88%DB%8C%D8%B4%DB%8C_%D9%85%D8%B4%D9%87%D8%AF.jpg"
+            },
+            {
+                id: "2",
+                url: "http://www.iran-booking.com/SystemUpload/hotels/boshra-hotel-apartment-mashhad-room.jpg"
+            }]
         }
     ]
 };
