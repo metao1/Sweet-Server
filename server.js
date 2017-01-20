@@ -42,17 +42,21 @@ var data = {
         comments: [{id: 0, comment: "سوییت خوبی بود"}
             , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
         viewed: 10,
-        thumbnails: [
-            {
+         thumbnails: [
+                  {
                 id: "0",
+                url: "http://r-ec.bstatic.com/images/hotel/840x460/198/19870679.jpg"
+            },            
+            {
+                id: "1",
                 url: "http://q-ec.bstatic.com/images/hotel/max1024x768/694/69461468.jpg"
             },
             {
-                id: "1",
+                id: "2",
                 url: "http://r-ec.bstatic.com/images/hotel/840x460/260/26087403.jpg"
             },
             {
-                id: "2",
+                id: "3",
                 url: "http://r-ec.bstatic.com/images/hotel/840x460/260/26087462.jpg"
             }]
     },
@@ -343,16 +347,20 @@ var data = {
                 , {id: 1, comment: "بسیار مرتب و تمیز بود"}],
             viewed: 10,
              thumbnails: [
-            {
+                  {
                 id: "0",
+                url: "http://r-ec.bstatic.com/images/hotel/840x460/198/19870679.jpg"
+            },            
+            {
+                id: "1",
                 url: "http://q-ec.bstatic.com/images/hotel/max1024x768/694/69461468.jpg"
             },
             {
-                id: "1",
+                id: "2",
                 url: "http://r-ec.bstatic.com/images/hotel/840x460/260/26087403.jpg"
             },
             {
-                id: "2",
+                id: "3",
                 url: "http://r-ec.bstatic.com/images/hotel/840x460/260/26087462.jpg"
             }]
         }
